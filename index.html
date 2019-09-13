@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <link href="css.css" rel="stylesheet">
+  <script src="js.js"></script>
+
+  <title>Reciclagem pelas</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Custom styles for this template -->
+  <link href="floating-labels.css" rel="stylesheet">
+</head>
+
+<body>
+  <form class="form-signin">
+    <div class="text-center mb-4">
+      <img class="mb-4"
+        src="https://cdn.icon-icons.com/icons2/1868/PNG/512/iconfinder-garbage-recycle-4454716_119743.png" alt=""
+        width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Autenticação</h1>
+      <p>Escolha abaixo como deseja acessar:</p>
+
+    </div>
+    <button type="button" id="condominio" class="btn btn-primary buttons">Condominio</button>
+    <br><br>
+    <button type="button" id="coletor" class="btn btn-success buttons">Coletor</button>
+    <br><br>
+
+    <script>
+      $("#condominio").click(function () {
+        $("#dados_condominio").fadeIn(1000);
+        $("#dados_coletor").fadeOut();
+        $("button[name='btnLogin']").fadeIn(1000);
+      });
+      $("#coletor").click(function () {
+        $("#dados_coletor").fadeIn(1000);
+        $("#dados_condominio").fadeOut();
+        $("button[name='btnLogin']").fadeIn(1000);
+      });
+
+    </script>
+
+    <!-- ocultar aqui-->
+    <div id="dados_condominio">
+      <div class="form-label-group">
+        <input type="text" id="inputNome" class="form-control" placeholder="Nome do condominio" required autofocus>
+        <label for="inputNome">Nome do Condominio</label>
+      </div>
+
+
+    </div>
+    <div id="dados_coletor">
+      <div class="form-label-group">
+        <input type="text" id="inputCatador" class="form-control" placeholder="Password" required>
+        <label for="inputCatador">Catador</label>
+      </div>
+    </div>
+
+
+    <button type="button" name="btnLogin" class="btn btn-danger btn-lg buttons">Entrar</button>
+
+    <!-- ........-->
+
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
+  </form>
+</body>
+
+</html>
